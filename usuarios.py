@@ -1,15 +1,15 @@
 import requests
 from autenticacion import autenticacion
 
+url_usuarios = f'https://{ip}:8006/api2/json/access/users'
+
 user = ''
 passwd = ''
 ip = ''
 
 # GET USUARIOS
-url_usuarios = f'https://{ip}:8006/api2/json/access/users'
 headers = autenticacion(user, passwd, ip)
 usuarios_bytes = requests.get(url=url_usuarios, headers=headers, verify=False)
-
 usuarios = usuarios_bytes.json()['data']
 
 for usuario in usuarios:
