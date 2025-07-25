@@ -5,11 +5,12 @@ user = ''
 passwd = ''
 ip = ''
 
+# GET USUARIOS
 url_usuarios = f'https://{ip}:8006/api2/json/access/users'
 headers = autenticacion(user, passwd, ip)
-rta = requests.get(url=url_usuarios, headers=headers, verify=False)
+usuarios_bytes = requests.get(url=url_usuarios, headers=headers, verify=False)
 
-usuarios = rta.json()['data']
+usuarios = usuarios_bytes.json()['data']
 
 for usuario in usuarios:
 	firstname = usuario.get('email', '')
