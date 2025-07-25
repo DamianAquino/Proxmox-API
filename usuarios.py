@@ -1,7 +1,5 @@
 import requests
 from autenticacion import autenticacion
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 user = 'daquino@pam'
 passwd = 'meditecEsGenial22_'
