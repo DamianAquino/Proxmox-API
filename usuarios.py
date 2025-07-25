@@ -12,17 +12,8 @@ rta = requests.get(url=url_usuarios, headers=headers, verify=False)
 usuarios = rta.json()['data']
 
 for usuario in usuarios:
-	if 'firstname' in usuario:
-		firstname = usuario['firstname']
-	else:
-		firstname = ''
-	if 'lastname' in usuario:
-		lastname = usuario['lastname']
-	else:
-		lastname = ''
-	if 'email' in usuario:
-		email = usuario['email']
-	else:
-		email = ''
+	firstname = usuario.get('email', '')
+	lastname = usuario.get('lastname', '')
+	email = usuario.get('email', '')
 
 	print(f'{usuario['userid']} - {firstname} - {lastname} - {email} - {usuario['enable']} - {usuario['realm-type']}')
