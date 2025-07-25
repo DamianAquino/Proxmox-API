@@ -1,11 +1,11 @@
 import requests
 from autenticacion import autenticacion
 
-url_usuarios = f'https://{ip}:8006/api2/json/access/users'
-
 user = ''
 passwd = ''
 ip = ''
+
+url_usuarios = f'https://{ip}:8006/api2/json/access/users'
 
 # GET USUARIOS
 headers = autenticacion(user, passwd, ip)
