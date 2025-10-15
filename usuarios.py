@@ -3,9 +3,9 @@ from autenticacion import autenticacion
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-user = 'daquino@pam'
-passwd = 'meditecEsGenial22_'
-ip = '10.112.22.5'
+user = ''
+passwd = ''
+ip = ''
 
 url_usuarios = f'https://{ip}:8006/api2/json/access/users'
 headers = autenticacion(user, passwd, ip)
