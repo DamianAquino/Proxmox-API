@@ -10,9 +10,9 @@ def mostrar_discos(discos):
 def mostrar_elementos(discos):
 	print('Ingresar nombre del disco')
 
-user = 'daquino@pam'
-passwd = 'meditecEsGenial22_'
-ip = '10.112.22.5'
+user = ''
+passwd = ''
+ip = ''
 
 url_nodos = f'https://{ip}:8006/api2/json/nodes'
 
